@@ -1,0 +1,15 @@
+---
+title: "About me"
+author: "Yueran Zhang"
+date: "11/03/2021"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+## This is a page including my information
+
+- Major in Epidemiology, class of 2023
+- Background: 2017-2021, Bachelor, Major in Pharmacy
+- Experience: Interned in PHIIC

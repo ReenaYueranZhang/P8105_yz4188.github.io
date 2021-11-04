@@ -1,0 +1,30 @@
+---
+title: "P8105_HW4_Index"
+author: "Yueran Zhang"
+date: "11/03/2021"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+---
+
+# Problem 1
+
+## Point1-A brief introductory landing page
+
+- This website is for P8105 of Homework4.
+- In Problem 1, there is a brief introduction what i am doing right now:) , my own professional experience, and professional networks links to the top button.
+
+- In problem 2,there are three distinct plot types in the lexdashboard.
+
+
+## Point2-Academic and professional experience 
+
+- This is the link where you can see my academic and professional experience
+-[About Me](about.html)
+
+
+## Point3-Links in the site  for my GitHub account and email
+
+- This links can be seen on the top pf the website.
+
