@@ -1,0 +1,58 @@
+---
+title: "Dashboard"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+    source: embed
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(tidyverse)
+library(p8105.datasets)
+library(plotly)
+data("instacart")
+instacart = instacart %>% 
+  janitor::clean_names()
+```
+
+ {data-width=650}
+-----------------------------------------------------------------------
+
+### Product name of reordered on Instacart
+
+```{r,echo = FALSE}
+instacart %>%
+  group_by(product_name,aisle)%>%
+  count()%>%
+  filter(n>1000)%>%
+  plot_ly(y = ~n, color = ~reorder(aisle,n), type = "box", colors = "viridis")
+
+
+```
+
+ {data-width=350}
+-----------------------------------------------------------------------
+
+### Numbers of reordered product on Instacart
+
+```{r,echo = FALSE}
+instacart %>%
+  group_by(aisle)%>%
+  count()%>%
+  filter(n>5000)%>%
+  plot_ly(x = ~reorder(aisle,n), y = ~n, color = ~aisle, type = "bar", colors = "viridis")
+
+```
+
+### People reoredered onInstacart (hour of day)
+
+```{r,echo = FALSE}
+instacart%>%
+  group_by(order_hour_of_day)%>%
+  count()%>%
+  ungroup()%>%
+  plot_ly(x = ~order_hour_of_day, y= ~n, type = 'scatter', mode = "lines", alpha = 0.5)
+```
+
